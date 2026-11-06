@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">gifTube</string>
+    <string name="keyboard_name">gifTube Keyboard (Turkish Q)</string>
+    <string name="action_emoji">Emoji Picker</string>
+    <string name="action_gif">GIF Selection</string>
+    <string name="search_hint">Search GIFs...</string>
+</resources>
