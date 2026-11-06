@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- Tab Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:background="#F5F5F5">
+
+        <Button
+            android:id="@+id/btn_keyboard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="⌨️"
+            android:background="?attr/selectableItemBackground" />
+
+        <Button
+            android:id="@+id/btn_emoji"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="😊"
+            android:background="?attr/selectableItemBackground" />
+
+        <Button
+            android:id="@+id/btn_gif"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="GIF"
+            android:background="?attr/selectableItemBackground" />
+
+    </LinearLayout>
+
+    <!-- Content Area -->
+    <FrameLayout
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Keyboard View -->
+        <android.inputmethodservice.KeyboardView
+            android:id="@+id/keyboard_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:keyPreviewLayout="@layout/key_preview" />
+
+        <!-- Emoji Panel (Hidden by default) -->
+        <LinearLayout
+            android:id="@+id/emoji_panel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:background="#FFFFFF">
+            <include layout="@layout/panel_emoji" />
+        </LinearLayout>
+
+        <!-- GIF Panel (Hidden by default) -->
+        <LinearLayout
+            android:id="@+id/gif_panel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:background="#FFFFFF">
+            <include layout="@layout/panel_gif" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
